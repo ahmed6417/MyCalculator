@@ -269,6 +269,12 @@ inherits: true;
         grid-template-columns: 1fr;
         justify-items: center;
         bottom: 50px;
+        position: inherit;
+        margin-top: 50px;
+    }
+
+    body {
+        padding: 80px 0px;
     }
 
     input#firstNumber {
