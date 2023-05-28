@@ -55,6 +55,14 @@ a {
     padding: 60px;
 }
 
+h3 {
+    font-size: 30px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+
+
 #ggle-icon {
     font-size: 40px;
     position: relative;
@@ -183,7 +191,7 @@ span#pre {
 
 .calculator {
     display: flex;
-    gap: 25px;
+    gap: 7px;
     align-items: center;
 }
 
