@@ -76,6 +76,11 @@ span#gicons {
 }
 
 
+.lightmode * .calculator-app {
+    box-shadow: none;
+}
+
+
 h1.mycalch1 {
     font-family: monospace;
     font-size: 35px;
