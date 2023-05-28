@@ -1,50 +1,87 @@
+<!--
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    
+░█████╗░██╗░░██╗███╗░░░███╗███████╗██████╗░░░░░░░░
+██╔══██╗██║░░██║████╗░████║██╔════╝██╔══██╗░░░░░░░
+███████║███████║██╔████╔██║█████╗░░██║░░██║░░░░░░░
+██╔══██║██╔══██║██║╚██╔╝██║██╔══╝░░██║░░██║░░░░░░░
+██║░░██║██║░░██║██║░╚═╝░██║███████╗██████╔╝░░░░░░░
+╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═════╝░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+██╗░░██╗░█████╗░░██████╗░██████╗░█████╗░███╗░░░███╗
+██║░░██║██╔══██╗██╔════╝██╔════╝██╔══██╗████╗░████║
+███████║██║░░██║╚█████╗░╚█████╗░███████║██╔████╔██║
+██╔══██║██║░░██║░╚═══██╗░╚═══██╗██╔══██║██║╚██╔╝██║
+██║░░██║╚█████╔╝██████╔╝██████╔╝██║░░██║██║░╚═╝░██║
+╚═╝░░╚═╝░╚════╝░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░Copyrights 2023 - Created for Sprints.ai░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="darkmode">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Calculator</title>
     <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
+
 
 
 
 <body>
 
-    <div class="calculator-app">
+<div class="switch-mode">
+<a id="lmode" class="switch"><span id="gicons" class="material-symbols-outlined">light_mode</span></a>
+<a style="display: none;" id="dmode" class="switch"><span id="gicons" class="material-symbols-outlined">dark_mode</span></a>
+</div>
 
 
-<h1 class="mycalch1">My Calculator</h1> 
-<p class="mycalch1">Simple function to sum any 2 values and show result by 2 options, by alert and inside page. This App created for <a href="https://sprints.ai/">Sprints.ai</a> tasks.</p>  
 
 
-<br><br>
-    
+<!-------------#1--------------->
+
+<div class="calculator-app">
+
+<h1 class="mycalch1">
+<span id="ggle-icon" class="material-symbols-outlined">calculate</span>My Calculator</h1> 
+<p class="mycalch1">Simple function to sum any 2 values and show result by 2 options, by alert and inside page.<br>This App created for <a href="https://sprints.ai/">Sprints.ai</a> tasks.</p>  
+
+<br><br><br>
+
+
+
+
+
+
+<!-------------#2--------------->
+
 <div class="calculator">
-
-<div class="input-group-prepend">
-<span class="input-group-text" id="pre">Any Number</span>
+<div class="calculator-sec">
+<span class="calculator-input">Any Number</span>
 </div>
 <input type="number" name="firstNumber" id="firstNumber" placeholder="Examble: 1" value="">
-
-
 <h3>+</h3>
-
-
-<div class="input-group-prepend">
-    <span class="input-group-text" id="pre">Any Number</span></div>
+<div class="calculator-sec">
+<span class="calculator-input">Any Number</span>
+</div>
 <input type="number" name="secondNumber" id="secondNumber" value="" placeholder="Examble: 5.5">
-
-
 </div>
 
 <br><br>
 
+
+
+
+
+<!-------------#3--------------->
+
 <div class="sec2">
-    <button type="button" class="btn" onclick="sum()">Alert Calculate</button>
-
-
+<button type="button" class="btn" onclick="sum()">Alert Calculate</button>
 <input style="display:none;" type="number" name="result" id="result" readonly>
 <button id="hideif" type="button" class="btn" onclick="suminbox()">Calculate Here</button>
 </div>
@@ -53,10 +90,20 @@
 
 </div>  
 
-<div class="powerewd">
-    Designed & Created by Ahmed Hossam for <img class="sprints-logo" src="https://sprints1.s3.eu-central-1.amazonaws.com/store/1/1681366422_logo.svg">Task #21
+
+
+
+
+<!-------------#4--------------->
+
+<div class="powerewd">Designed & Created by Ahmed Hossam for <img class="sprints-logo" src="https://sprints1.s3.eu-central-1.amazonaws.com/store/1/1681366422_logo.svg">Task #21
 </div>
 
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="./main.js"></script>
 </body>
 </html>

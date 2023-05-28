@@ -1,4 +1,7 @@
 
+
+/* Fixed Values */
+
 * { 
     margin: 0;
     padding: 0;
@@ -7,6 +10,9 @@
 
 html {
     background: #000;
+    height: 100%;
+    display: grid;
+
 }
 
 
@@ -15,27 +21,72 @@ body {
     margin: auto;
 }
 
-.calculator-app {
-    margin: 50px;
-    background: #ececec;
-    border-radius: 50px;
-    padding: 60px;
+.lightmode {
+    background: #fff;
+    height: 100%;
+    display: grid;
+
+}
+
+.darkmode {
+    background: #000;
+    height: 100%;
+    display: grid;
+
+}
+
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
 }
 
 
 
 
+/* Other Values */
+
+
+.calculator-app {
+    margin: 50px;
+    background: #ececec;
+    border-radius: 0px;
+    padding: 60px;
+}
+
+#ggle-icon {
+    font-size: 40px;
+    position: relative;
+    bottom: -11px;
+    margin-right: 7px;
+}
+
+.switch-mode {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+span#gicons {
+    background: #ebebeb;
+    border-radius: 400px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+
 h1.mycalch1 {
     font-family: monospace;
     font-size: 35px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 p.mycalch1 {
     font-family: monospace;
     margin-top: 10px;
-    max-width: 35%;
+    max-width: 100%;
     text-align: center;
     margin: auto;
 }
@@ -46,8 +97,6 @@ button.btn {
     cursor: pointer;
     transition: 0.7s;
 }
-
-
 
 .calculator {
     background: #d5d5d547;
@@ -96,7 +145,7 @@ button#hideif {
     padding-right: 15px !important;
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 5px;
     position: fixed;
     width: 100%;
     right: 0;
@@ -123,7 +172,6 @@ input#result {
 }
 
 
-
 span#pre {
     font-family: monospace;
 }
@@ -134,12 +182,69 @@ span#pre {
     align-items: center;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 800;
+
+
+/* Animation */
+/* I will try to describe it for sprinters*/
+
+
+@property --angle {
+syntax: '<angle>';
+initial-value: 90deg;
+inherits: true;
 }
 
+@property --gradX {
+syntax: '<percentage>';
+initial-value: 50%;
+inherits: true;
+}
+
+@property --gradY {
+syntax: '<percentage>';
+initial-value: 0%;
+inherits: true;
+}
+
+
+:root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+}
+
+
+.calculator-app {
+    border: 0.55rem solid;
+    /* Please note that i used here A conic gradient "CONE" which is a gradient with color transitions rotated around a center point. */
+    border-image: conic-gradient(
+    from 
+    var(--angle),/*By default,angle is 0deg starting point and position in center by defult*/
+    rgb(0 239 69),/*First Color to move*/
+    rgb(0 239 69),/*Another Color*/
+    rgb(0 239 69),/*Another Color to move*/
+    #0000 0.1turn)/*Border color with turn which have a 1 maximum value which represent the hollow area*/
+    30; /**/
+    
+    animation: borderRotate var(--d) linear infinite forwards;
+    box-shadow: 0 3px 100px 20px rgb(0 239 69 / 15%);
+}
+
+
+@keyframes borderRotate {
+    100% {
+        --angle: 420deg;
+    }
+}
+
+
+
+
+
+/* media query */
 
 @media only screen and (max-width: 900px) {
     .calculator {
@@ -209,5 +314,3 @@ p.mycalch1 {
 
     
 }
-
-
