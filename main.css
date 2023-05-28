@@ -1,0 +1,213 @@
+
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+html {
+    background: #000;
+}
+
+
+body {
+    max-width: 85%;
+    margin: auto;
+}
+
+.calculator-app {
+    margin: 50px;
+    background: #ececec;
+    border-radius: 50px;
+    padding: 60px;
+}
+
+
+
+
+h1.mycalch1 {
+    font-family: monospace;
+    font-size: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p.mycalch1 {
+    font-family: monospace;
+    margin-top: 10px;
+    max-width: 35%;
+    text-align: center;
+    margin: auto;
+}
+
+button.btn {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+
+
+.calculator {
+    background: #d5d5d547;
+    max-width: max-content;
+    padding: 15px 30px;
+    border-radius: 82px;
+    margin: auto;
+}
+
+input#firstNumber {
+    border: solid 1px #818181;
+    background: #0000;
+    padding: 4px 15px;
+    border-radius: 50px;
+}
+
+input#secondNumber {
+    border: solid 1px #818181;
+    background: #0000;
+    padding: 4px 15px;
+    border-radius: 50px;
+}
+
+button.btn {
+    background: #c2c2c285;
+    padding: 10px 25px;
+    border-radius: 7px;
+    border: 0;
+}
+
+input#result {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    
+}
+
+button#hideif {
+    width: 100%;
+}
+
+.powerewd {
+    color: #373837;
+    margin: 40px;
+    border-radius: 50px;
+    padding: 0px 50px;
+    padding-right: 15px !important;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    justify-content: flex-end;
+    bottom: 0;
+}
+
+img.sprints-logo {
+    max-width: 90px;
+    filter: grayscale(1);
+}
+
+input#result {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #000;
+    color: #00ff45;
+    font-weight: 900;
+    border: 0;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+span#pre {
+    font-family: monospace;
+}
+
+.calculator {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .calculator {
+        max-width: 100%;
+        background: #0000;
+    }
+
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+        gap: 0;
+    }
+
+    .powerewd {
+        margin: 0;
+        padding: 0 !important;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        bottom: 50px;
+    }
+
+    input#firstNumber {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    input#secondNumber {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    span#pre {
+        display: none;
+    }
+
+
+
+    h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 50px;
+}
+
+p.mycalch1 {
+    max-width: 100%;
+}
+
+    .input-group-prepend {
+        text-align: center;
+    }
+
+    h1.mycalch1 {
+        font-size: 25px;
+    }
+
+
+
+    
+}
+
+

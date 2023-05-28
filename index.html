@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+
+
+
+<body>
+
+    <div class="calculator-app">
+
+
+<h1 class="mycalch1">My Calculator</h1> 
+<p class="mycalch1">Simple function to sum any 2 values and show result by 2 options, by alert and inside page. This App created for <a href="https://sprints.ai/">Sprints.ai</a> tasks.</p>  
+
+
+<br><br>
+    
+<div class="calculator">
+
+<div class="input-group-prepend">
+<span class="input-group-text" id="pre">Any Number</span>
+</div>
+<input type="number" name="firstNumber" id="firstNumber" placeholder="Examble: 1" value="">
+
+
+<h3>+</h3>
+
+
+<div class="input-group-prepend">
+    <span class="input-group-text" id="pre">Any Number</span></div>
+<input type="number" name="secondNumber" id="secondNumber" value="" placeholder="Examble: 5.5">
+
+
+</div>
+
+<br><br>
+
+<div class="sec2">
+    <button type="button" class="btn" onclick="sum()">Alert Calculate</button>
+
+
+<input style="display:none;" type="number" name="result" id="result" readonly>
+<button id="hideif" type="button" class="btn" onclick="suminbox()">Calculate Here</button>
+</div>
+
+
+
+</div>  
+
+<div class="powerewd">
+    Designed & Created by Ahmed Hossam for <img class="sprints-logo" src="https://sprints1.s3.eu-central-1.amazonaws.com/store/1/1681366422_logo.svg">Task #21
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
